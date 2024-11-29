@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container hero-section">
+    <div class="justify-content-center align-items-center" style="height: 200px; text" id="text">
+        <h3> Find Job,Hire Talents, Transform Lives</h3>
+        <p>Hustlehub is your go-to platform for connecting job seekers with employers in the informal sector.
+             Whether you’re hiring for house cleaning, construction, or farming, or showcasing your skills, we’re here to make it simple and effective.
+             Join us in building a thriving community, one connection at a time.</p>
+
+                <button><a href="#">Find Gigs</a></button>
+
+
+
+    </div>
+
+    <div class="img">
+    <img src="{%static 'image/carpenter.jpg'%} ">
+    <img src="{%static 'image/mjengo.jpg' %} ">
+    <img src="{%static 'image/shamba.jpg'%}">
+    <img src="{%static 'image/chisel.jpg'%}">
+    <img src="{%static 'image/welding.jpg'%}">
+    <img src="{%static 'image/sand.jpg'%}">
+
+
+    </div>
+
+</div>
+
+
+{% endblock content %}

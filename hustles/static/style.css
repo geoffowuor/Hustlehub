@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    background: #003366;
+    padding: 10px;
+    color: #FFFFFF;
+    font-family: "Raleway", serif;
+}
+
+nav ul{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 2rem;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+nav ul li a button{
+    border-style: none;
+    padding: 6px;
+    background: #fef5e7;
+    color: #333333;
+    border-radius: 5px;
+}
+body{
+    background: #fef5e7;
+    color: #333333;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*hero-section styling*/
+.hero-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    gap: 20px;
+    padding: 10px;
+    height: 100vh;
+}
+.hero-section #text{
+    display: block;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    max-width: 50%;
+    padding: 10px;
+    height: 100vh;
+
+}
+.hero-section #text h3{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+.hero-section #text p{
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    width: 95%;
+}
+
+.hero-section #text a{
+    text-decoration: none;
+    color: white;
+}
+.hero-section #text  button{
+    border-style: none;
+    padding: 10px;
+    background: #003366;
+    color: white;
+    border-radius: 5px;
+
+}
+.hero-section .img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    max-width: 50%;
+    padding: 10px;
+    height: 75vh;
+}
+.hero-section .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2px;
+}
