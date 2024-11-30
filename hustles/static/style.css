@@ -10,6 +10,9 @@ nav{
     padding: 10px;
     color: #FFFFFF;
     font-family: "Raleway", serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
 }
 
 nav ul{
@@ -49,6 +52,7 @@ body{
     gap: 20px;
     padding: 10px;
     height: 100vh;
+    margin-top: 30px;
 }
 .hero-section #text{
     display: block;
@@ -99,4 +103,45 @@ body{
     object-fit: cover;
     border-radius: 12px;
     margin-bottom: 2px;
+}
+
+/*About section styling*/
+.title h3{
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-family: "Raleway", serif;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 10px;
+    height: 75vh;
+}
+.about .about-img{
+    max-width: 50%;
+    height: 60vh;
+
+}
+.about .about-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2px;
+}
+.about .about-text{
+    max-width: 50%;
+
+}
+.about .about-text p{
+
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    width: 90%;
 }
