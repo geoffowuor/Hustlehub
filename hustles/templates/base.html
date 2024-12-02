@@ -4,8 +4,9 @@
     {% block title %}<title>Hustlehub|making life better</title>{% endblock title %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
-<!--Bootstrap-->
+   <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oxanium:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+   <!--Bootstrap-->
 <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.min.css" %}">
 <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
                 <!--CSS main-->
@@ -26,7 +27,7 @@
     <ul>
         <li><a href=""> Home</a> </li>
         <li><a href="#about">About </a></li>
-        <li><a href="">Testimonials</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
         <li><a href=""> Find Gigs</a> </li>
         <li><a href=""> <button>Post Gigs</button></a> </li>
         
@@ -51,3 +52,59 @@
 {% endblock content %}
 
 </body>
+
+<footer>
+    {% block footer %}
+
+    <div class="company">
+        <h3>Hustlhub</h3>
+        <p>Find Job,Hire Talents, Transform Lives</p>
+    
+    </div>
+
+    <div class="useful-links">
+        <h3>Useful Links</h3>
+        <ul>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms and Condition</a></li>
+            <li><a href="#">Legal</a></li>
+            <li><a href="#">Team</a></li>
+
+        </ul>
+
+    </div>
+    <div class="contact">
+        <h3> Contact</h3>
+        <ul>
+            <li><a href=""><box-icon name='map'></box-icon> Juja,Kenya</a></li>
+            <li><a href="#"><box-icon name='envelope' ></box-icon> Email Us</a></li>
+            <li><a href="#"><box-icon name='phone' ></box-icon> Call Us</a></li>
+            
+
+        </ul>
+
+        <div class="socials">
+            <ul>
+                <li><a href="#"><box-icon name='twitter' type='logo' color=lightblue></box-icon></a></li>
+                <li><a href="#"><box-icon name='instagram' type='logo' color=hotpink></box-icon></a></li>
+                <li><a href="#"><box-icon name='facebook' type='logo' color=blue></box-icon></a></li>
+            
+
+
+            </ul>
+        
+
+        </div>
+
+    </div>
+
+
+
+
+    
+    {% endblock footer %}
+
+
+
+</footer>

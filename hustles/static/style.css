@@ -145,3 +145,80 @@ body{
     letter-spacing: 0.05em;
     width: 90%;
 }
+
+/*testimonials section styling*/
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+.testimonials .person{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    border-radius: 5pxs;
+    height: auto;
+}
+.testimonials .person .person-details{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+}
+.testimonials .person img{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    object-fit: cover;
+}
+.testimonials .person p{
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    max-width: 95%;
+
+}
+
+/*footer section styling*/
+footer{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 10px;
+    background: #003366;
+    color: black;
+    bottom: 0;
+
+}
+footer li{
+    list-style: none;
+    gap: 4px;
+}
+footer h3{
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+    
+}
+footer .contact li a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+footer .contact .socials ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
