@@ -1,0 +1,35 @@
+{% extends "emp_base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="form">
+    <form method="POST">
+        <input type="text" placeholder="Your full names" name="emp_name"></input>
+        <input type="text" placeholder="Tell us a little about you" name="emp_about"></input>
+        <input type="text" placeholder="Enter your phone or email" name="emp_contact"></input>
+        <input type="text" placeholder="Your skills separated with commas" name="emp_skills"></input>
+        <input type="text" placeholder="Where are you located?" name="emp_location"></input>
+        <input type="media" name="emp_photo"></input>
+
+<button type="submit">Submit</button>
+
+
+
+
+    </form>
+
+
+
+</div>
+
+{% endblock content %}
+
+
+
+
+
+#excluding the footer
+{% block footer %}
+
+{% endblock footer %}

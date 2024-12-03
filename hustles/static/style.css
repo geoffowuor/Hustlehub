@@ -214,7 +214,7 @@ footer .contact li a{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 10px;
 }
 footer .contact .socials ul{
     display: flex;
