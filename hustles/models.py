@@ -20,7 +20,7 @@ class employee(models.Model):
     emp_photo = models.ImageField(upload_to="media/")
     emp_contact = models.CharField(max_length=35)
     emp_skills = models.CharField(max_length=420)
-    emp_location = models.CharField(max_length=420)
+    emp_location = models.CharField(max_length=430)
     
 
 ##Employer details
@@ -29,4 +29,5 @@ class employer(models.Model):
     boss_contact = models.CharField(max_length=70)
     boss_location = models.CharField(max_length=45)
     boss_about = models.CharField(max_length=420, null=True)
+    
     
