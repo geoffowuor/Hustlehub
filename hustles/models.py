@@ -28,4 +28,5 @@ class employer(models.Model):
     boss_name = models.CharField(max_length=70)
     boss_contact = models.CharField(max_length=70)
     boss_location = models.CharField(max_length=45)
+    boss_about = models.CharField(max_length=420, null=True)
     

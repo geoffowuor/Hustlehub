@@ -1,0 +1,35 @@
+{% extends "boss_base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="form">
+    <form method="POST">
+        <input type="text" placeholder="Gig title" name="gig_name"></input>
+        <input type="text" placeholder="How much would you pay per?" name="gig_rate"></input>
+        <input type="text" placeholder="Describe what you need done" name="gig_description"></input>
+        <input type="text" placeholder="What skills are you looking for? separatedwith commas" name="gig_skills"></input>
+        <input type="text" placeholder="What's the gig location?" name="gig_location"></input>
+      
+
+<button type="submit">Submit</button>
+
+
+
+
+    </form>
+
+
+
+</div>
+
+{% endblock content %}
+
+
+
+
+
+#excluding the footer
+{% block footer %}
+
+{% endblock footer %}
