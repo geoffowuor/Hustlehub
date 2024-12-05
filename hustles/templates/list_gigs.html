@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Gigs</title>
+    <style>
+        .gig {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Available Gigs</h1>
+    {% if gigs %}
+        {% for gig in gigs %}
+        <div class="gig">
+            <h2>{{ gig.name }}</h2>
+            <p><strong>Location:</strong> {{ gig.location }}</p>
+            <p><strong>Rate:</strong> ${{ gig.rate }}</p>
+            <p><strong>Skills Required:</strong> {{ gig.skill }}</p>
+            <p><a href="{% url 'gig_details' gig.id %}">View Details</a></p>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>No gigs available at the moment.</p>
+    {% endif %}
+</body>
+</html>

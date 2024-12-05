@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applications for Your Gigs</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Applications for Your Gigs</h1>
+
+    {% if applications %}
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Gig</th>
+                <th>Applicant</th>
+                <th>Date Applied</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for application in applications %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ application.gig.name }}</td>
+                <td>{{ application.employee.emp_name }}</td>
+                <td>{{ application.application_date|date:"Y-m-d H:i" }}</td>
+                <td>{{ application.status }}</td>
+                <td>
+                    <a href="{% url 'respond_application' application.id %}">Respond</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p>No applications found for your gigs.</p>
+    {% endif %}
+</body>
+</html>

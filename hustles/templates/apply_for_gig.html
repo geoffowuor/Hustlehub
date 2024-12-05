@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Gig</title>
+</head>
+<body>
+    <h1>Apply for Gig</h1>
+    <p>You're applying for: {{ gig.title }}</p> <!-- Assuming the gig object has a 'title' attribute -->
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }} <!-- Renders the application form fields in paragraph format -->
+        <button type="submit">Submit Application</button>
+    </form>
+
+    <a href="{% url 'gig_list' %}">Back to Gigs</a> <!-- Link to gig listings -->
+</body>
+</html>

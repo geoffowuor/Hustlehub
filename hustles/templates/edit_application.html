@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Application</title>
+</head>
+<body>
+    <h1>Edit Application</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }} <!-- Renders the application form fields in paragraph format -->
+        <button type="submit">Update Application</button>
+    </form>
+
+    <a href="{% url 'admin_applications' %}">Back to Applications</a> <!-- Adjust URL name as needed -->
+</body>
+</html>
