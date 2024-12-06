@@ -48,7 +48,7 @@
                 <th>Applicant</th>
                 <th>Date Applied</th>
                 <th>Contact</th>
-                <th>Action</th>
+        
                 
             </tr>
         </thead>
@@ -62,9 +62,7 @@
                 <td>{{ application.contact }}</td>
             
                 
-                <td>
-                    <a href="{% url 'respond_application' application.id %}">Respond</a>
-                </td>
+
             </tr>
             {% endfor %}
         </tbody>
