@@ -1,4 +1,5 @@
 {% extends "emp_base.html" %}
+{% block title %}<title>Apply for Gig</title>{% endblock title %}
 {% block content %}
 <div class="form">
 <h2>Apply for Gig: {{ gig.name }}</h2>
@@ -11,15 +12,17 @@
 
 
   <label for="employee"></label>
-  <input type="text" id="employee" name="employee" placeholder="Enter your name"><br>
+  <input type="text" id="employee" name="employee" placeholder="Enter your name" required><br>
 
-  
+  <label for="employee"></label>
+  <input type="text" id="employee" name="contact" placeholder="Enter your Contact" required><br>
+
   <label for="skills"></label>
-  <textarea id="skills" name="skills" rows="3"  placeholder="your skills separated by comma"></textarea><br>
+  <textarea id="skills" name="skills" rows="3"  placeholder="Your skills separated by comma" required></textarea><br>
 
   
   <label for="cover_letter"></label>
-  <textarea id="cover_letter" name="cover_letter" rows="4" ></textarea><br>
+  <textarea id="cover_letter" name="cover_letter" rows="4" placeholder="Why should you be considered for this?"></textarea><br>
 
   <button type="submit">Submit Application</button>
 </form>

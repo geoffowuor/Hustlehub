@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applications for Your Gigs</title>
+{% extends "boss_base.html" %}
+{% load static %}
+{% block title %} <title> Applications</title>{% endblock title %}
+{% block content %}
     <style>
+
+        #applications{
+            margin-top:80px;
+        }
+        #applications h1{
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+        }
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -26,8 +34,10 @@
         }
     </style>
 </head>
+<div class="container" id="applications">
+
 <body>
-    <h1>Applications for Your Gigs</h1>
+    <h1>Applications received</h1>
 
     {% if applications %}
     <table>
@@ -37,8 +47,9 @@
                 <th>Gig</th>
                 <th>Applicant</th>
                 <th>Date Applied</th>
-                <th>Status</th>
-                <th>Actions</th>
+                <th>Contact</th>
+                <th>Action</th>
+                
             </tr>
         </thead>
         <tbody>
@@ -46,9 +57,11 @@
             <tr>
                 <td>{{ forloop.counter }}</td>
                 <td>{{ application.gig.name }}</td>
-                <td>{{ application.employee.emp_name }}</td>
+                <td>{{ application.employee }}</td>
                 <td>{{ application.application_date|date:"Y-m-d H:i" }}</td>
-                <td>{{ application.status }}</td>
+                <td>{{ application.contact }}</td>
+            
+                
                 <td>
                     <a href="{% url 'respond_application' application.id %}">Respond</a>
                 </td>
@@ -60,4 +73,9 @@
     <p>No applications found for your gigs.</p>
     {% endif %}
 </body>
-</html>
+</div>
+{% endblock content %}
+
+{% block footer %}
+
+{% endblock footer %}

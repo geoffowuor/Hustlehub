@@ -14,7 +14,6 @@ def index(request):
 def success(request):
     return render(request, 'application_success.html')
 
-
 # Register view
 def register(request):
     if request.method == 'POST':
@@ -69,8 +68,10 @@ def edit_gig(request, pk):
         gig_instance.name = request.POST['name']
         gig_instance.rate = request.POST['rate']
         gig_instance.description = request.POST['description']
+        gig_instance.skill = request.POST['skill']
+        gig_instance.location = request.POST['location']
         gig_instance.save()
-        return redirect('boss_dash')  # Replace with the appropriate success URL
+        return redirect('dash_boss')  # Replace with the appropriate success URL
 
     return render(request, 'gig_edit.html', {'gig': gig_instance})
 
@@ -95,8 +96,6 @@ def dash_boss(request):
 
 def apply_for_gig(request, gig_id):
     gig_instance = get_object_or_404(gig, id=gig_id)  
-    
-
     if request.method == 'POST':
         form = applicationForm(request.POST)
         if form.is_valid():
@@ -113,8 +112,8 @@ def apply_for_gig(request, gig_id):
 
 #boss view applications
 def employer_applications(request):
-    employer = request.user.employer  
-    applications = application.objects.filter(gig__employer=employer).order_by('-application_date')
+    #employer = request.user.employer  
+    applications = application.objects.order_by('-application_date')
     return render(request, 'employer_applications.html', {'applications': applications})
 
 #action on applications
