@@ -3,12 +3,16 @@ from .forms import employerForm, employeeForm, gigForm,applicationForm
 from .models import gig, employee, application
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
+from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
+
+def success(request):
+    return render(request, 'application_success.html')
 
 
 # Register view
@@ -37,102 +41,74 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('home')  # Redirect to a dashboard or homepage
+            return redirect('add_gig')  # Redirect to a dashboard or homepage
         else:
             messages.error(request, 'Invalid username or password!')
     return render(request, 'accounts/login.html')
 
-# Logout view
-def logout_view(request):
-    logout(request)
-    return redirect('login')
-####################################
 
-def create_employer(request):
-    if request.method == 'POST':
-        form = employerForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('boss')  
-    else:
-        form = employerForm()
-    return render(request, 'boss_profile_add.html', {'form': form})
 
-def create_employee(request):
-    if request.method == 'POST':
-        form = employeeForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('worker_dash')
-    else:
-        form = employeeForm()
-    return render(request, 'emp_profile_add.html', {'form': form})
-
+@login_required
 def create_gig(request):
     if request.method == 'POST':
         form = gigForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('boss_dash')
+            return redirect('dash_boss')
     else:
         form = gigForm()
     return render(request, 'gig_add.html', {'form': form})
 
+# View for editing a gig
+
+def edit_gig(request, pk):
+    gig_instance = get_object_or_404(gig, pk=pk)  # Fetch gig by pk
+
+    if request.method == 'POST':
+        # Update gig instance with form data
+        gig_instance.name = request.POST['name']
+        gig_instance.rate = request.POST['rate']
+        gig_instance.description = request.POST['description']
+        gig_instance.save()
+        return redirect('boss_dash')  # Replace with the appropriate success URL
+
+    return render(request, 'gig_edit.html', {'gig': gig_instance})
+
+# View for deleting a gig
+def delete_gig(request, pk):
+    gig_instance = get_object_or_404(gig, pk=pk)
+    if request.method == 'POST':
+        gig_instance.delete()
+        return redirect('dash_boss')  # Redirect to your list view
+    return render(request, 'gig_confirm_delete.html', {'gig': gig_instance})
+
 #gig lists
 def list_gigs(request):
-    gigs = gig.objects.filter(status='Open').order_by('-date_posted')  
+    gigs = gig.objects.order_by('-date_posted')  
     return render(request, 'list_gigs.html', {'gigs': gigs})
 
-def gig_details(request, gig_id):
-    gig = get_object_or_404(gig, id=gig_id)
-    return render(request, 'gig_details.html', {'gig': gig})
+def dash_boss(request):
+    gigs = gig.objects.order_by('-date_posted')  
+    return render(request, 'boss.html', {'gigs': gigs})
 
 #gig application
 
 def apply_for_gig(request, gig_id):
-    gig = get_object_or_404(gig, id=gig_id)  
-    employee = employee.objects.get(emp_name=request.user.username)  
+    gig_instance = get_object_or_404(gig, id=gig_id)  
+    
 
     if request.method == 'POST':
         form = applicationForm(request.POST)
         if form.is_valid():
             application = form.save(commit=False)
-            application.gig = gig
-            application.employee = employee
+            application.gig = gig_instance
             application.save()
-            return redirect('gig_list')  
+            return redirect('application_success')  
     else:
         form = applicationForm()
 
-    return render(request, 'apply_for_gig.html', {'form': form, 'gig': gig})
+    return render(request, 'apply_for_gig.html', {'form': form, 'gig': gig_instance})
 
-def edit_application(request, application_id):
-    application = get_object_or_404(application, id=application_id)
-    if request.method == 'POST':
-        form = applicationForm(request.POST, instance=application)
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Application updated successfully.')
-            return redirect('admin_applications')  
-    else:
-        form = applicationForm(instance=application)
-    return render(request, 'edit_application.html', {'form': form, 'application': application})
-
-
-# Delete an application
-def delete_application(request, application_id):
-    application = get_object_or_404(application, id=application_id)
-    if request.method == 'POST':
-        application.delete()
-        messages.success(request, 'Application deleted successfully.')
-        return redirect('admin_applications')  
-    return render(request, 'delete_application.html', {'application': application})
-
-#employee view for his applications
-def employee_applications(request):
-    employee = request.user.employee  
-    applications = application.objects.filter(employee=employee).order_by('-application_date')
-    return render(request, 'employee_applications.html', {'applications': applications})
 
 
 #boss view applications

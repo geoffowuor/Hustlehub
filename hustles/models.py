@@ -46,15 +46,11 @@ class employer(models.Model):
 #gig applicaation
 class application(models.Model):
     gig = models.ForeignKey(gig, on_delete=models.CASCADE)  # Related gig
-    employee = models.ForeignKey(employee, on_delete=models.CASCADE)  # Related employee
+    employee = models.CharField(max_length=50, null=True)  
+    skills = models.CharField(max_length=420, null=True)
     cover_letter = models.TextField(max_length=1000, null=True, blank=True)  # Optional cover letter
-    application_date = models.DateTimeField(auto_now_add=True)  # Date of application
-    status = models.CharField(
-        max_length=20,
-        choices=[('Pending', 'Pending'), ('Accepted', 'Accepted'), ('Rejected', 'Rejected')],
-        default='Pending'
-    )  # Status of the application
-
+    application_date = models.DateTimeField(auto_now_add=True, null=True)  # Date of application
+   
     def __str__(self):
         return self.cover_letter
     

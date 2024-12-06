@@ -9,14 +9,15 @@ urlpatterns = [
     path('accounts/login/', views.login_view, name="login"),
     path('accounts/register', views.register, name="register"),
     #####
-    path('employee/applications/', views.employee_applications, name='worker_dash'),
-    path('employer_add/', views.create_employer, name='employer_add'),
-    path('worker_add', views.create_employee, name='worker_add'),
+    path('success/', views.success, name='application_success'),
     path('add', views.create_gig, name='add_gig'),
+    path('dashboard/', views.dash_boss, name="dash_boss"),
     path('applications/', views.employer_applications, name='boss_dash'),
     path('application/<int:application_id>/respond/', views.respond_application, name='respond_application'),
     path('gigs/', views.list_gigs, name='list_gigs'),
-    path('gigs/<int:gig_id>/', views.gig_details, name='gig_details'),
+    path('gig/<int:pk>/edit/', views.edit_gig, name='edit'),
+    path('gig/<int:pk>/delete/', views.delete_gig, name='gig-delete'),
+    path('apply/<int:gig_id>/', views.apply_for_gig, name="apply"),
 
 
 ]

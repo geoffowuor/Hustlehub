@@ -1,20 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply for Gig</title>
-</head>
-<body>
-    <h1>Apply for Gig</h1>
-    <p>You're applying for: {{ gig.title }}</p> <!-- Assuming the gig object has a 'title' attribute -->
+{% extends "emp_base.html" %}
+{% block content %}
+<div class="form">
+<h2>Apply for Gig: {{ gig.name }}</h2>
 
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }} <!-- Renders the application form fields in paragraph format -->
-        <button type="submit">Submit Application</button>
-    </form>
+<form method="POST">
+  {% csrf_token %}
+  
+  <label for="gig"></label>
+  <input type="text" id="gig" name="gig" value="{{ gig.id }}" readonly><br>
 
-    <a href="{% url 'gig_list' %}">Back to Gigs</a> <!-- Link to gig listings -->
-</body>
-</html>
+
+  <label for="employee"></label>
+  <input type="text" id="employee" name="employee" placeholder="Enter your name"><br>
+
+  
+  <label for="skills"></label>
+  <textarea id="skills" name="skills" rows="3"  placeholder="your skills separated by comma"></textarea><br>
+
+  
+  <label for="cover_letter"></label>
+  <textarea id="cover_letter" name="cover_letter" rows="4" ></textarea><br>
+
+  <button type="submit">Submit Application</button>
+</form>
+</div>
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Delete Gig</h2>
+<p>Are you sure you want to delete "{{ gig.name }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm</button>
+    <a href="{% url 'dash_boss' %}">Cancel</a>
+</form>
+{% endblock %}
+
+{% block footer %}{% endblock footer %}

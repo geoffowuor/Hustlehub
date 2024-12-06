@@ -1,4 +1,7 @@
+{% extends "emp_base.html" %}
+{% load static %}
 
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,19 +25,32 @@
     </style>
 </head>
 <body>
+    <div class="gig-title">
     <h1>Available Gigs</h1>
+    </div>
     {% if gigs %}
         {% for gig in gigs %}
-        <div class="gig">
+        <div class="container" id="gig"> 
+            <div class="main">
             <h2>{{ gig.name }}</h2>
-            <p><strong>Location:</strong> {{ gig.location }}</p>
-            <p><strong>Rate:</strong> ${{ gig.rate }}</p>
-            <p><strong>Skills Required:</strong> {{ gig.skill }}</p>
-            <p><a href="{% url 'gig_details' gig.id %}">View Details</a></p>
-        </div>
+            <a href="{% url 'apply' gig.id %}"><button>Apply</button></a>
+            </div><br>
+            <p><box-icon name='book-open' type='solid' ></box-icon>{{gig.description}}</p><br>
+            <p><strong><box-icon name='map'></box-icon></strong> {{ gig.location }}</p><br>
+            <p><strong><box-icon name='time-five' ></box-icon></strong> ${{ gig.rate }}/hr</p><br>
+            <p><box-icon name='cog' ></box-icon></strong> {{ gig.skill }}</p><br>
+          
+            <hr>
+        </div><
         {% endfor %}
     {% else %}
         <p>No gigs available at the moment.</p>
     {% endif %}
 </body>
 </html>
+
+{% endblock content %}
+
+{% block footer %}
+{% endblock footer %}
+

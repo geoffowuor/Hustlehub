@@ -1,4 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
+{% block content %}
+
 <link href="{% static "style.css" %}" rel="stylesheet">
 <div class="page">
 <div class="forms">
@@ -13,3 +16,9 @@
 <p>Already have an account?<a href="{% url 'login' %}">Login here</a></p>
 </div>
 </div>
+{% endblock content %}
+
+
+{% block footer %}
+
+{% endblock footer %}

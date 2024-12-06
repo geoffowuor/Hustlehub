@@ -183,6 +183,157 @@ body{
 
 }
 
+
+/*Auth forms styling */
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    background: whitesmoke;
+}
+.page .forms h2{
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+}
+.page .forms input{
+    width: 100%;
+    border-radius: 7px;
+    border-style: none;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.page .forms button{
+    border-style: none;
+    border-radius: 7px;
+    padding: 15px;
+    margin-left: 40%;
+    background: black;
+    color: white;
+}
+.page .forms button:hover{
+    background: blue;
+    color: black;
+    transform: transition 0.3s ease;
+}
+
+/*forms styling/application/*/
+.form{
+    margin-top: 150px;
+    display: block;
+    justify-content: center;
+    justify-items: baseline;
+    max-width: 100%;
+    margin-left: 30%;
+    margin-right: 25%;
+}
+.form h2{
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-family: "Raleway", serif;
+    margin-right: 150px;
+
+}
+.form form label{
+    display: none;
+}
+
+form input{
+    width: 80%;
+    margin-bottom: 5px;
+    border-style: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+form textarea{
+    width: 80%;
+    margin-bottom: 5px;
+    border-style: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+form button{
+    border-style: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin-left: 30%;
+    margin-top: 10px;
+    background:  #003366;
+    color: white;
+
+}
+
+
+/*gig list page styling*/
+.gig-title h1 {
+    font-family: "Raleway", serif;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin-left: 5%;
+}
+.gig-title{
+    margin-top: 80px;
+}
+#gig{
+    margin-top: 5px;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+#gig .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 5px;
+}
+#gig .main button{
+    margin-right: 5px;
+    border-style: none;
+    border-radius: 5px;
+    padding: 12px;
+    background: #003366;
+    color: #FFFFFF;
+}
+#gig h2{
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+}
+#gig p{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*footer section styling*/
 footer{
     margin-top: 40px;

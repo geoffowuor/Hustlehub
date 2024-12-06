@@ -1,0 +1,28 @@
+{% extends "boss_base.html" %}
+{% load static %}
+{% block content %}<div class="form">
+    <h2>Edit Gig</h2>
+<form method="POST" action="{% url 'edit' gig.pk%}">
+    {% csrf_token %}
+
+    <label for="name">Gig Name</label>
+    <input type="text" id="name" name="name"  value="{{gig.name}}"required>
+
+    <label for="rate">Rate</label>
+    <input type="number" id="rate" name="rate" value="{{gig.rate}}"required>
+
+    <label for="description">Description</label>
+    <textarea id="description" name="description"  required>{{gig.description}}</textarea>
+
+    <label for="skill">Skill</label>
+    <input type="text" id="skill" name="skill" value="{{gig.skill}}" required>
+
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" value="{{gig.location}}" required>
+
+    <button type="submit">Save Changes</button>
+</form>
+</div>
+{% endblock content %}
+
+{% block footer %}{% endblock footer %}

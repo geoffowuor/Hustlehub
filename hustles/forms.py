@@ -22,4 +22,4 @@ class gigForm(forms.ModelForm):
 class applicationForm(forms.ModelForm):
     class Meta:
         model = application
-        fields = ['cover_letter'] 
+        fields = '__all__'
