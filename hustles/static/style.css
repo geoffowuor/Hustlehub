@@ -211,12 +211,12 @@ body{
     border-radius: 7px;
     padding: 15px;
     margin-left: 40%;
-    background: black;
+    background:  #003366;
     color: white;
 }
 .page .forms button:hover{
-    background: blue;
-    color: black;
+    background: black;
+    color: white;
     transform: transition 0.3s ease;
 }
 
