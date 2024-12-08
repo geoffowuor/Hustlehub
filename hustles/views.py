@@ -1,9 +1,8 @@
 from django.shortcuts import render,redirect,get_object_or_404
-from .forms import employerForm, employeeForm, gigForm,applicationForm
-from .models import gig, employee, application
+from .forms import  gigForm,applicationForm
+from .models import gig, application
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.models import User
-from django.urls import reverse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
