@@ -6,14 +6,14 @@
       "use": "@vercel/python"
     },
     {
-      "src": "HustleHub/wsgi.py",
+      "src": "Hustlehub/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "HustleHub/wsgi.py"
+      "dest": "Hustlehub/wsgi.py"
     }
   ]
 }
