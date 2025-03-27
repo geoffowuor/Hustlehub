@@ -1,12 +1,15 @@
 *{
     margin: 0;
 }
+body{
+    background: #F8F9FA;
+}
 nav{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     justify-items: center;
-    background: #003366;
+    background: #0077B6;
     padding: 10px;
     color: #FFFFFF;
     font-family: "Raleway", serif;
@@ -33,7 +36,7 @@ nav ul li a{
 nav ul li a button{
     border-style: none;
     padding: 6px;
-    background: #fef5e7;
+    background: 	#FFD166;
     color: #333333;
     border-radius: 5px;
 }
@@ -47,14 +50,19 @@ body{
 .hero-section{
     display: flex;
     align-items: center;
+    margin-top: 80px;
 }
 .hero-section #text  button{
     border-style: none;
     padding: 10px;
-    background: #003366;
+    background: #F76C2F;
     color: white;
     border-radius: 5px;
 
+}
+.hero-section a{
+    text-decoration: none;
+    color: #FFFFFF;
 }
 .hero-section .img{
     display: grid;
@@ -76,10 +84,12 @@ body{
 
 /*About section styling*/
 .title h3{
+    color: #333333;
     text-align: center;
     line-height: 1.2;
     letter-spacing: 0.02em;
     font-family: "Raleway", serif;
+    margin-top: 40px;
 }
 
 .about{
@@ -163,6 +173,7 @@ body{
     background: whitesmoke;
 }
 .page .forms h2{
+    color: #333333;
     text-align: center;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -180,7 +191,7 @@ body{
     border-radius: 7px;
     padding: 15px;
     margin-left: 40%;
-    background:  #003366;
+    background:  #F76C2F;
     color: white;
 }
 .page .forms button:hover{
@@ -200,6 +211,7 @@ body{
     margin-right: 25%;
 }
 .form h2{
+    color: #333333;
     text-align: center;
     line-height: 1.2;
     letter-spacing: 0.02em;
@@ -239,6 +251,7 @@ form button{
 
 /*gig list page styling*/
 .gig-title h1 {
+    color: #333333;
     font-family: "Raleway", serif;
     line-height: 1.2;
     letter-spacing: 0.05em;
@@ -269,6 +282,7 @@ form button{
     color: #FFFFFF;
 }
 #gig h2{
+    color: #333333;
     font-family: 'Poppins', sans-serif;
     line-height: 1.2;
     letter-spacing: 0.02em;

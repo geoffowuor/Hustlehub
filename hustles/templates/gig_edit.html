@@ -1,5 +1,6 @@
 {% extends "boss_base.html" %}
 {% load static %}
+<body>
 {% block content %}<div class="form">
     <h2>Edit Gig</h2>
 <form method="POST" action="{% url 'edit' gig.pk%}">
@@ -23,6 +24,7 @@
     <button type="submit">Save Changes</button>
 </form>
 </div>
+</body>
 {% endblock content %}
 
 {% block footer %}{% endblock footer %}

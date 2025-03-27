@@ -77,8 +77,6 @@ requests-file==2.0.0
 requests-ftp==0.3.1
 rpm==4.20.0
 s3transfer==0.10.4
-selinux @ file:///builddir/build/BUILD/libselinux-3.7-build/libselinux-3.7/src
-sepolicy @ file:///builddir/build/BUILD/policycoreutils-3.7-build/selinux-3.7/python/sepolicy
 service-identity==24.2.0
 setools==4.5.1
 setuptools==69.2.0
