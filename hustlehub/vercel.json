@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "Hustlehub/wsgi.py",
+      "src": "hustlehub/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "Hustlehub/wsgi.py"
+      "dest": "hustlehub/wsgi.py"
     }
   ]
 }
