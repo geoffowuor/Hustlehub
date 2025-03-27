@@ -2,10 +2,6 @@
   "version": 2,
   "builds": [
     {
-      "src": "manage.py",
-      "use": "@vercel/python"
-    },
-    {
       "src": "Hustlehub/wsgi.py",
       "use": "@vercel/python"
     }
