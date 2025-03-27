@@ -47,37 +47,6 @@ body{
 .hero-section{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    justify-items: center;
-    gap: 20px;
-    padding: 10px;
-    height: 100vh;
-    margin-top: 30px;
-}
-.hero-section #text{
-    display: block;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    max-width: 50%;
-    padding: 10px;
-    height: 100vh;
-
-}
-.hero-section #text h3{
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-}
-.hero-section #text p{
-    line-height: 1.5;
-    letter-spacing: 0.05em;
-    width: 95%;
-}
-
-.hero-section #text a{
-    text-decoration: none;
-    color: white;
 }
 .hero-section #text  button{
     border-style: none;
