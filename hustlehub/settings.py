@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-i2fc^1z#zp1ab059+20@n8-rr97=w_!h8ti&vj_x%xhfic0*7^
 DEBUG = False
 
 ALLOWED_HOSTS = [
-     'hustlehub-one.vercel.app',
+    'hustlehub-one.vercel.app'
     '127.0.0.1',
     'localhost',
 ]
