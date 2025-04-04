@@ -1,15 +1,15 @@
 {
-  "version": 2,
   "builds": [
     {
-      "src": "hustlehub/wsgi.py",
-      "use": "@vercel/python"
+      "src": "sesblog/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "hustlehub/wsgi.py"
+      "dest": "sesblog/wsgi.py"
     }
   ]
 }
