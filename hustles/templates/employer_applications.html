@@ -47,7 +47,9 @@
                 <th>Gig</th>
                 <th>Applicant</th>
                 <th>Date Applied</th>
+                <th>Skills</th>
                 <th>Contact</th>
+                
         
                 
             </tr>
@@ -59,7 +61,9 @@
                 <td>{{ application.gig.name }}</td>
                 <td>{{ application.employee }}</td>
                 <td>{{ application.application_date|date:"Y-m-d H:i" }}</td>
+                <td> {{application.skills}}</td>
                 <td>{{ application.contact }}</td>
+                
             
                 
 

@@ -39,7 +39,7 @@ def login_view(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            return redirect('add_gig')  # Redirect to a dashboard or homepage
+            return redirect('add_gig')  # Redirect to a dashboard
         else:
             messages.error(request, 'Invalid username or password!')
     return render(request, 'accounts/login.html')
