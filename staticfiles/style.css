@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+}
+body{
+    background: #F8F9FA;
+    color: #333333;
+    font-family: "Noto Sans", sans-serif;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    background: #0077B6;
+    padding: 10px;
+    color: #FFFFFF;
+    font-family: "Montserrat", sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav ul{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 2rem;
+}
+nav ul li{
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
+nav ul li a button{
+    border-style: none;
+    padding: 6px;
+    background: 	#FFD166;
+    color: #333333;
+    border-radius: 5px;
+}
+
+/*hero-section styling*/
+.hero-section{
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+.hero-section #text  button{
+    border-style: none;
+    padding: 10px;
+    background: #F76C2F;
+    color: white;
+    border-radius: 5px;
+
+}
+.hero-section h3{
+    font-family: "Montserrat", sans-serif;
+}
+.hero-section a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.hero-section .img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    max-width: 50%;
+    padding: 10px;
+    height: 75vh;
+}
+.hero-section .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2px;
+}
+
+/*About section styling*/
+.title h3{
+    color: #333333;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 40px;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 10px;
+    height: 75vh;
+}
+.about .about-img{
+    max-width: 50%;
+    height: 60vh;
+
+}
+.about .about-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 2px;
+}
+.about .about-text{
+    max-width: 50%;
+
+}
+.about .about-text p{
+
+    line-height: 1.4;
+    letter-spacing: 0.05em;
+    width: 90%;
+}
+
+/*testimonials section styling*/
+.testimonials{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+.testimonials .person{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    padding: 10px;
+    border-radius: 5pxs;
+    height: auto;
+}
+.testimonials .person .person-details{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6px;
+}
+.testimonials .person img{
+    height: 60px;
+    width: 60px;
+    border-radius: 60px;
+    object-fit: cover;
+}
+.testimonials .person p{
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    max-width: 95%;
+
+}
+
+
+/*Auth forms styling */
+.page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    height: 100vh;
+    background: whitesmoke;
+}
+.page .forms h2{
+    color: #333333;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 10px;
+}
+.page .forms input{
+    width: 100%;
+    border-radius: 7px;
+    border-style: none;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+.page .forms button{
+    border-style: none;
+    border-radius: 7px;
+    padding: 15px;
+    margin-left: 40%;
+    background:  #F76C2F;
+    color: white;
+}
+.page .forms button:hover{
+    background: black;
+    color: white;
+    transform: transition 0.3s ease;
+}
+
+/*forms styling/application/*/
+.form{
+    margin-top: 150px;
+    display: block;
+    justify-content: center;
+    justify-items: baseline;
+    max-width: 100%;
+    margin-left: 30%;
+    margin-right: 25%;
+}
+.form h2{
+    color: #333333;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    font-family: "Montserrat", sans-serif;
+    margin-right: 150px;
+
+}
+.form form label{
+    display: none;
+}
+
+form input{
+    width: 80%;
+    margin-bottom: 5px;
+    border-style: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+form textarea{
+    width: 80%;
+    margin-bottom: 5px;
+    border-style: none;
+    padding: 12px;
+    border-radius: 5px;
+}
+form button{
+    border-style: none;
+    border-radius: 5px;
+    padding: 15px;
+    margin-left: 30%;
+    margin-top: 10px;
+    background:  #003366;
+    color: white;
+
+}
+
+
+
+/*gig list page styling*/
+.gig-title h1 {
+    color: #333333;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    margin-left: 5%;
+}
+.gig-title{
+    margin-top: 80px;
+}
+#gig{
+    margin-top: 5px;
+    padding: 20px;
+    border-radius: 20px;
+
+}
+#gig .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 5px;
+}
+#gig .main button{
+    margin-right: 5px;
+    border-style: none;
+    border-radius: 5px;
+    padding: 12px;
+    background: #003366;
+    color: #FFFFFF;
+}
+#gig h2{
+    color: #333333;
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+
+}
+#gig p{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-items: center;
+    gap: 5px;
+}
+
+
+/*footer section styling*/
+footer{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    justify-items: center;
+    padding: 10px;
+    background: #0077B6;
+    color: white;
+    bottom: 0;
+
+}
+footer li{
+    list-style: none;
+    gap: 4px;
+}
+footer h3{
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+    
+}
+footer .contact li a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+footer .contact .socials ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
