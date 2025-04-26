@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-i2fc^1z#zp1ab059+20@n8-rr97=w_!h8ti&vj_x%xhfic0*7^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+# Example settings.py
+ALLOWED_HOSTS = ['hustlehub-6bzy.onrender.com', '*']
 
 
 # Application definition
